@@ -1,0 +1,20 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+.app-header {
+    height: 60px;
+    margin-bottom: 20px;
+    color: white;
+    background-color: #384245;
+}
+
+.app-header-title {
+    font-size: 2em;
+    padding: 12px;
+    margin-left: 4px;
+}

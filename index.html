@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="/css/app.css" rel="stylesheet" type="text/css">
+
+        <title>Country Picker App</title>
+    </head>
+
+    <body>
+        <div class="app-header">
+            <div class="app-header-title">
+                Country Selector
+            </div>
+        </div>
+
+        <form id="countryNameInput">
+            <input type="text" name="name" placeholder="Country Name"/>
+            <input type="submit" value="Submit">
+        </form>
+
+        <form id="countryCodeInput">
+            <input type="text" name="code" placeholder="Two-Digit Country Code"/>
+            <input type="submit" value="Submit">
+        </form>
+
+        <div id="countryMessage"></div>
+
+        <div id="countryData">
+            <div class="country-info"></div>
+            <div class="country-code"></div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="/app/country-picker-search.service.js"></script>
+        <script src="/app/country-picker.controller.js"></script>
+    </body>
+</html>
