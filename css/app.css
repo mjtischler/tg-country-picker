@@ -1,5 +1,6 @@
-body,
-html {
+body {
+    width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
     font-family: 'Lato', sans-serif;
@@ -14,16 +15,32 @@ html {
 }
 
 .app-header-title {
-    font-size: 2em;
-    font-weight: 600;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.app-header-title-text {
+    align-self: center;
+    margin-left: 10px;
+    font-size: 2.4em;
 }
 
 .app-header-title-subword {
     color: #7AC143;
 }
 
+.country-picker-body-container {
+    display: flex;
+    margin: 10px;
+}
+
 .country-picker-body {
-    margin: 20px;
+    width: 40%;
+    min-height: 30%;
+    padding: 20px;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
 }
 
 #countryNameInput,
@@ -32,17 +49,17 @@ html {
 }
 
 .country-picker-input {
-    width: 200px;
+    width: 55%;
     height: 24px;
     padding: 10px;
-    margin-right: 20px;
+    margin-right: 6px;
     margin-bottom: 20px;
     font-size: 1.1em;
 }
 
 .country-picker-button {
     display: inline-block;
-    width: 157px;
+    width: 36%;
     font-size: 1.1em;
     background-color: #7AC143;
     border: none;
@@ -60,23 +77,57 @@ html {
     background-color: #74B740;
 }
 
+.country-code-key,
+.country-code-value {
+    display: inline-block;
+    margin-top: 4px;
+    font-size: 1.2em;
+}
+
+.country-code-value {
+    margin-left: 2px;
+    font-weight: bold;
+}
+
+#countryError {
+    color: red;
+}
+
+#countryTable {
+    width: 100%;
+}
+
+#countryTable tr:nth-child(even) {
+    background: #F3F3F3;
+}
+
 #countryTableHeader {
     text-align: left;
 }
 
+.error {
+    color: red;
+}
+
 @media only screen and (max-width: 959px) and (min-width: 0) {
-    .app-header-title {
-        font-size: 1.6em;
+    .app-header-title-text {
+        font-size: 2em;
+    }
+
+    .country-picker-body {
+        width: 100vw;
     }
 
     .country-picker-input {
-        width: 170px;
+        width: 50%;
         height: 16px;
-        font-size: 1em;
+        font-size: .9em;
     }
 
     .country-picker-button {
-        font-size: .9em;
+        width: 38%;
         height: 44px;
+        padding: 12px 20px;
+        font-size: .85em;
     }
 }

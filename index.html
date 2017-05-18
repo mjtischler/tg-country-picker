@@ -3,7 +3,6 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
         <link href="/css/app.css" rel="stylesheet" type="text/css">
 
@@ -13,29 +12,37 @@
     <body>
         <div class="app-header">
             <div class="app-header-title">
-                <span>COUNTRY</span><span class="app-header-title-subword">PICKER</span>
+                <div class="app-header-title-text">
+                    <span>COUNTRY</span><span class="app-header-title-subword">PICKER</span>
+                </div>
             </div>
         </div>
 
-        <div class="country-picker-body">
-            <form id="countryNameInput">
-                <input class="country-picker-input" type="text" name="name" placeholder="Country Name"/>
-                <input class="country-picker-button" type="submit" value="Find Country">
-            </form>
+        <div class="country-picker-body-container">
+            <div class="country-picker-body">
+                <form id="countryNameInput">
+                    <input class="country-picker-input" type="text" name="name" placeholder="Country Name"/>
+                    <input class="country-picker-button" type="submit" value="Find Country">
+                </form>
 
-            <form id="countryCodeInput">
-                <input class="country-picker-input" type="text" name="code" placeholder="Two-letter Country Code"/>
-                <input class="country-picker-button" type="submit" value="Find Code">
-            </form>
+                <form id="countryCodeInput">
+                    <input class="country-picker-input" type="text" name="code" placeholder="Two-letter Country Code"/>
+                    <input class="country-picker-button" type="submit" value="Find Code">
+                </form>
 
-            <div id="countryMessage"></div>
+                <div>
+                    <span id="countryError"></span>
 
-            <div id="countryData">
-                <table id="countryTable">
-                    <!-- MT: jQuery will take care of rendering our table by iterating through the returned array. Check the controller for more info. -->
-                </table>
+                    <span id="countryMessage"></span>
+                </div>
 
-                <div class="country-code"></div>
+                <div id="countryData">
+                    <table id="countryTable" cellpadding="0">
+                        <!-- MT: jQuery will take care of rendering our table by iterating through the returned array. Check the controller for more info. -->
+                    </table>
+
+                    <div class="country-code"></div>
+                </div>
             </div>
         </div>
 
