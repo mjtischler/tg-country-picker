@@ -28,3 +28,8 @@ Once you've cloned the repo and installed the local server, navigate to the repo
 `http-server`
 
 The server defaults to port 8080, and you can navigate to the app in your browser by heading to `http://localhost:8080/`. *Voila!* Enjoy!
+
+## Screenies
+![Mobile](https://github.com/mjtischler/tg-country-picker/blob/develop/images/mobile.jpg)
+
+![Desktop](https://github.com/mjtischler/tg-country-picker/blob/develop/images/desktop.jpg)
