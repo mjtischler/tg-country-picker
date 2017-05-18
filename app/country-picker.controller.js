@@ -13,8 +13,8 @@ $(function () {
             event.preventDefault();
 
             // MT: We want to clear any results before rendering an error or making a service request.
+            $('#countryError, #countryMessage, .country-code').text('');
             $('#countryTable').empty();
-            $('.country-code').text('');
 
             var validForm = false;
             var formId = this.id;
@@ -24,11 +24,11 @@ $(function () {
 
             // MT: Alright, time to validate! We're going to check for the following: empty inputs; numbers and/or special characters (see `var isOnlyLetters`, above); and country-codes that are NOT 2 letters. If we pass all these tests, we'll mark the `validForm` as true and we can submit our data to the api! Woohoo!
             if ((searchInput.length === 0) && (formId === 'countryNameInput')) {
-                $('#countryMessage').text('Please enter something... anything... into the `Country Name` field.');
+                $('#countryError').text('Please enter something... anything... into the `Country Name` field.');
             } else if (isOnlyLetters === null) {
-                $('#countryMessage').text('Please enter letters, not numbers or special characters.');
+                $('#countryError').text('Please enter letters, not numbers or special characters.');
             } else if ((searchInput.length !== 2) && (formId === 'countryCodeInput')) {
-                $('#countryMessage').text('Please enter a two-letter country code.');
+                $('#countryError').text('Please enter a two-letter country code.');
             } else {
                 validForm = true;
             }
@@ -72,7 +72,7 @@ $(function () {
                         );
                     });
                 } else if (data.result.name) {
-                    $('.country-code').text('Country Name: ' + data.result.name);
+                    $('.country-code').append('<span class="country-code-key">Country Name: </span>' + '<span class="country-code-value">' + data.result.name + '</span>');
                 }
             }
 
